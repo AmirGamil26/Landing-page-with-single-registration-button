@@ -1,0 +1,174 @@
+/*  ==== Reset =====  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+/*  ==== General =====  */ 
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../webfonts/Poppins-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../webfonts/Poppins-SemiBold.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../webfonts/OpenSans-Regular.ttf');
+    font-weight: 400;
+}
+body{
+    background-image: linear-gradient(to left, var(--Violet), var(--Soft-Magenta)); 
+    color: #fff;
+}
+/*  ==== Main =====  */
+main{
+    background: url('../img/bg-desktop.svg');
+}
+main img{
+    width: 15%;
+    height: 15%;
+    margin: 3em 1em;
+}
+main .container{
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1em 0;
+
+}
+main .container .img1 {
+    width: 100%;
+    height: 100%;
+    margin: 1em 1em;
+    padding: 1em 1em;
+}
+main .container .img1 img{
+    width: 100%;
+    height: 100%;
+}
+main .container .desc{
+    margin: 6em 1em;
+    padding: 1em 1em;
+}
+main .container .desc h1{
+    font-family: 'Poppins';
+    font-size: 35px;
+    line-height: 1.6;
+    margin: 0.5em 0;
+    padding: 0 1.5em;
+}
+main .container .desc p{
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 1em 0;
+    padding: 0 3.5em;
+}
+main .container .desc button{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #fff;
+    color: var(--Violet);
+    border: none;
+    border-radius: 25px;
+    padding: 0.8em 3.5em;
+    margin: 1em 3em;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+main .container .desc button:hover{
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+}
+main .social-media{
+    margin: 1em 4em;
+    text-align: right;
+}
+main .social-media a{
+    color: #fff;
+    border: 0.5px solid #fff;
+    border-radius: 50%;
+    margin: 0 0.3em;
+    padding: 0.3em 0.3em;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+main .social-media a:hover{
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+}
+/*  === Footer section ===  */
+main .attribution{
+    font-family: 'Open Sans';
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+/*  ==== Media Query =====  */
+@media screen and (max-width: 600px){
+    main img{
+        width: 50%;
+        height: 50%;
+    }
+    main .container{
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+    }
+    main .container .img1{
+        width: 100%; 
+        height: 100%;
+        margin: 0 3em 0 1em;
+    }
+    main .container .desc{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    main .container .desc h1{
+        font-family: 'Poppins';
+        font-size: 25px;
+        line-height: 1.6;
+        margin: 0.5em 0;
+        padding: 0 1.5em;
+    }
+    main .container .desc p{
+        font-family: 'Open Sans';
+        font-size: 15.75px;
+        line-height: 1.6;
+        margin: 1em 0;
+        padding: 0 2em;
+    }
+    main .container .desc button{
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 16px;
+        background-color: #fff;
+        color: var(--Violet);
+        border: none;
+        border-radius: 25px;
+        padding: 0.8em 5em;
+        margin: 1em 3em;
+        cursor: pointer;
+        transition: 0.5s all ease-in-out;
+    }
+    main .social-media{
+        text-align: center;
+        margin: 2em 0 3em 0;
+    }
+}
